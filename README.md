@@ -13,6 +13,8 @@ Based on "How to Run PostgreSQL and pgAdmin Using Docker" at https://towardsdata
 
 Based on "Super Productivity" at https://github.com/johannesjo/super-productivity
 
+![Image](https://github.com/user-attachments/assets/75482dc4-bee1-4de4-8276-4cbd306cef32)
+
 Create yarn.lock file as follows:
 
 ```
