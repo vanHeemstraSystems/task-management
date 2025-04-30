@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>summary – Task Management</title>
+<title>documentation – Task Management</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link active" data-scroll-target="#documentation">Documentation</a>
+  <ul class="collapse">
+  <li><a href="#install-readthedocs" id="toc-install-readthedocs" class="nav-link" data-scroll-target="#install-readthedocs">100 - Install ReadTheDocs</a></li>
+  <li><a href="#autogeneration-of-readthedocs" id="toc-autogeneration-of-readthedocs" class="nav-link" data-scroll-target="#autogeneration-of-readthedocs">200 - Autogeneration of ReadTheDocs</a></li>
+  <li><a href="#build-your-documentation" id="toc-build-your-documentation" class="nav-link" data-scroll-target="#build-your-documentation">300 - Build Your Documentation</a></li>
+  <li><a href="#set-up-webhooks-optional" id="toc-set-up-webhooks-optional" class="nav-link" data-scroll-target="#set-up-webhooks-optional">400 - Set Up Webhooks (Optional)</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">500 - Troubleshooting</a></li>
+  <li><a href="#maintaining-your-documentation" id="toc-maintaining-your-documentation" class="nav-link" data-scroll-target="#maintaining-your-documentation">600 - Maintaining Your Documentation</a></li>
+  <li><a href="#trigger-a-build-on-readthedocs" id="toc-trigger-a-build-on-readthedocs" class="nav-link" data-scroll-target="#trigger-a-build-on-readthedocs">700 - Trigger a build on ReadTheDocs</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">800 - Tips</a></li>
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues">900 - Common Issues</a></li>
+  <li><a href="#view-the-documentation" id="toc-view-the-documentation" class="nav-link" data-scroll-target="#view-the-documentation">1000 - View the Documentation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -123,13 +135,95 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="table-of-contents" class="level1">
-<h1>Table of contents</h1>
+<section id="documentation" class="level1">
+<h1>Documentation</h1>
+<p>Read the Docs: <a href="https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/">vanHeemstraSystems-task-management</a></p>
+<section id="install-readthedocs" class="level2">
+<h2 class="anchored" data-anchor-id="install-readthedocs">100 - Install ReadTheDocs</h2>
+<p>Run the following command:</p>
+<pre><code>$ pip install sphinx sphinx_rtd_theme recommonmark</code></pre>
+<p>Next to create the docs run:</p>
+<pre><code>$ cd docs
+$ make html</code></pre>
+<p>Your docs will be created inside <code>docs/build</code>.</p>
+</section>
+<section id="autogeneration-of-readthedocs" class="level2">
+<h2 class="anchored" data-anchor-id="autogeneration-of-readthedocs">200 - Autogeneration of ReadTheDocs</h2>
+<ol type="1">
+<li><p>Make sure there is a <code>.readthedocs.yml</code> file at the root of your GitHub repository.</p></li>
+<li><p>Connect your GitHub repository to ReadTheDocs at https://readthedocs.org/</p></li>
+</ol>
+<ol type="1">
+<li>Go to <a href="https://readthedocs.org/">ReadTheDocs</a> and create an account</li>
+<li>Click “Import a Project”</li>
+<li>Connect your GitHub account if you haven’t already</li>
+<li>Select your repository from the list</li>
+<li>Configure your project settings</li>
+</ol>
+</section>
+<section id="build-your-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="build-your-documentation">300 - Build Your Documentation</h2>
+<ol type="1">
+<li>Push your changes to GitHub</li>
+<li>ReadTheDocs will automatically build your documentation</li>
+<li>Visit your project page on ReadTheDocs to see the result</li>
+</ol>
+</section>
+<section id="set-up-webhooks-optional" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-webhooks-optional">400 - Set Up Webhooks (Optional)</h2>
+<p>ReadTheDocs should automatically set up webhooks, but if not:</p>
+<ol type="1">
+<li>Go to your repository settings on GitHub</li>
+<li>Go to Webhooks</li>
+<li>Add a webhook with the URL from your ReadTheDocs project settings</li>
+</ol>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">500 - Troubleshooting</h2>
 <ul>
-<li><a href="README.md">Task - Management</a></li>
+<li><strong>Build fails</strong>: Check the build logs on ReadTheDocs</li>
+<li><strong>Missing content</strong>: Ensure all files are included in your <code>toctree</code></li>
+<li><strong>Formatting issues</strong>: Check that your Markdown/reStructuredText is valid</li>
+<li><strong>Images not showing</strong>: Verify paths to images are correct</li>
 </ul>
+</section>
+<section id="maintaining-your-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="maintaining-your-documentation">600 - Maintaining Your Documentation</h2>
+<ul>
+<li>Update your documentation files as needed</li>
+<li>Push changes to GitHub</li>
+<li>ReadTheDocs will automatically rebuild</li>
+<li>Use ReadTheDocs’ versioning feature to maintain documentation for different releases</li>
+</ul>
+</section>
+<section id="trigger-a-build-on-readthedocs" class="level2">
+<h2 class="anchored" data-anchor-id="trigger-a-build-on-readthedocs">700 - Trigger a build on ReadTheDocs</h2>
+<p>On <a href="https://readthedocs.org/">ReadTheDocs</a>, after logging in navigate to your GitHub repository entry (e.g., <code>https://app.readthedocs.org/projects/YOUR-GITHUB-REPOSITOY-NAME/</code>) and from the dotted menu (…) choose <strong>Rebuild version</strong>.</p>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">800 - Tips</h2>
+<ul>
+<li><strong>Images</strong>: Move images to <code>docs/source/_static/</code> and update references</li>
+<li><strong>Code blocks</strong>: Ensure proper syntax highlighting is specified</li>
+<li><strong>Cross-references</strong>: Update to use Sphinx’s reference system</li>
+<li><strong>Metadata</strong>: Add appropriate metadata to each page for better SEO</li>
+</ul>
+</section>
+<section id="common-issues" class="level2">
+<h2 class="anchored" data-anchor-id="common-issues">900 - Common Issues</h2>
+<ul>
+<li><strong>Broken links</strong>: Double-check all links after conversion</li>
+<li><strong>Missing images</strong>: Ensure all image paths are updated</li>
+<li><strong>Build failures</strong>: Check the ReadTheDocs build logs for errors</li>
+<li><strong>Formatting differences</strong>: Some Markdown features might render differently in Sphinx</li>
+</ul>
+</section>
+<section id="view-the-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="view-the-documentation">1000 - View the Documentation</h2>
+<p>Visit https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

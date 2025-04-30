@@ -1,1 +1,1 @@
-Sitemap: https://github.com/vanHeemstraSystems/task-management/sitemap.xml
+Sitemap: https://vanHeemstraSystems.github.io/task-management/sitemap.xml

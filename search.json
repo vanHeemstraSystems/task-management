@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Task Management",
+    "objectID": "SUMMARY.html",
+    "href": "SUMMARY.html",
+    "title": "Table of contents",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Table of contents\n\nTask - Management"
   },
   {
     "objectID": "about.html",
@@ -14,10 +14,87 @@
     "text": "About this site"
   },
   {
-    "objectID": "SUMMARY.html",
-    "href": "SUMMARY.html",
-    "title": "Table of contents",
+    "objectID": "DOCUMENTATION.html",
+    "href": "DOCUMENTATION.html",
+    "title": "Documentation",
     "section": "",
-    "text": "Table of contents\n\nTask - Management"
+    "text": "Read the Docs: vanHeemstraSystems-task-management\n\n\nRun the following command:\n$ pip install sphinx sphinx_rtd_theme recommonmark\nNext to create the docs run:\n$ cd docs\n$ make html\nYour docs will be created inside docs/build.\n\n\n\n\nMake sure there is a .readthedocs.yml file at the root of your GitHub repository.\nConnect your GitHub repository to ReadTheDocs at https://readthedocs.org/\n\n\nGo to ReadTheDocs and create an account\nClick “Import a Project”\nConnect your GitHub account if you haven’t already\nSelect your repository from the list\nConfigure your project settings\n\n\n\n\n\nPush your changes to GitHub\nReadTheDocs will automatically build your documentation\nVisit your project page on ReadTheDocs to see the result\n\n\n\n\nReadTheDocs should automatically set up webhooks, but if not:\n\nGo to your repository settings on GitHub\nGo to Webhooks\nAdd a webhook with the URL from your ReadTheDocs project settings\n\n\n\n\n\nBuild fails: Check the build logs on ReadTheDocs\nMissing content: Ensure all files are included in your toctree\nFormatting issues: Check that your Markdown/reStructuredText is valid\nImages not showing: Verify paths to images are correct\n\n\n\n\n\nUpdate your documentation files as needed\nPush changes to GitHub\nReadTheDocs will automatically rebuild\nUse ReadTheDocs’ versioning feature to maintain documentation for different releases\n\n\n\n\nOn ReadTheDocs, after logging in navigate to your GitHub repository entry (e.g., https://app.readthedocs.org/projects/YOUR-GITHUB-REPOSITOY-NAME/) and from the dotted menu (…) choose Rebuild version.\n\n\n\n\nImages: Move images to docs/source/_static/ and update references\nCode blocks: Ensure proper syntax highlighting is specified\nCross-references: Update to use Sphinx’s reference system\nMetadata: Add appropriate metadata to each page for better SEO\n\n\n\n\n\nBroken links: Double-check all links after conversion\nMissing images: Ensure all image paths are updated\nBuild failures: Check the ReadTheDocs build logs for errors\nFormatting differences: Some Markdown features might render differently in Sphinx\n\n\n\n\nVisit https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#install-readthedocs",
+    "href": "DOCUMENTATION.html#install-readthedocs",
+    "title": "Documentation",
+    "section": "",
+    "text": "Run the following command:\n$ pip install sphinx sphinx_rtd_theme recommonmark\nNext to create the docs run:\n$ cd docs\n$ make html\nYour docs will be created inside docs/build."
+  },
+  {
+    "objectID": "DOCUMENTATION.html#autogeneration-of-readthedocs",
+    "href": "DOCUMENTATION.html#autogeneration-of-readthedocs",
+    "title": "Documentation",
+    "section": "",
+    "text": "Make sure there is a .readthedocs.yml file at the root of your GitHub repository.\nConnect your GitHub repository to ReadTheDocs at https://readthedocs.org/\n\n\nGo to ReadTheDocs and create an account\nClick “Import a Project”\nConnect your GitHub account if you haven’t already\nSelect your repository from the list\nConfigure your project settings"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#build-your-documentation",
+    "href": "DOCUMENTATION.html#build-your-documentation",
+    "title": "Documentation",
+    "section": "",
+    "text": "Push your changes to GitHub\nReadTheDocs will automatically build your documentation\nVisit your project page on ReadTheDocs to see the result"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#set-up-webhooks-optional",
+    "href": "DOCUMENTATION.html#set-up-webhooks-optional",
+    "title": "Documentation",
+    "section": "",
+    "text": "ReadTheDocs should automatically set up webhooks, but if not:\n\nGo to your repository settings on GitHub\nGo to Webhooks\nAdd a webhook with the URL from your ReadTheDocs project settings"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#troubleshooting",
+    "href": "DOCUMENTATION.html#troubleshooting",
+    "title": "Documentation",
+    "section": "",
+    "text": "Build fails: Check the build logs on ReadTheDocs\nMissing content: Ensure all files are included in your toctree\nFormatting issues: Check that your Markdown/reStructuredText is valid\nImages not showing: Verify paths to images are correct"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#maintaining-your-documentation",
+    "href": "DOCUMENTATION.html#maintaining-your-documentation",
+    "title": "Documentation",
+    "section": "",
+    "text": "Update your documentation files as needed\nPush changes to GitHub\nReadTheDocs will automatically rebuild\nUse ReadTheDocs’ versioning feature to maintain documentation for different releases"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#trigger-a-build-on-readthedocs",
+    "href": "DOCUMENTATION.html#trigger-a-build-on-readthedocs",
+    "title": "Documentation",
+    "section": "",
+    "text": "On ReadTheDocs, after logging in navigate to your GitHub repository entry (e.g., https://app.readthedocs.org/projects/YOUR-GITHUB-REPOSITOY-NAME/) and from the dotted menu (…) choose Rebuild version."
+  },
+  {
+    "objectID": "DOCUMENTATION.html#tips",
+    "href": "DOCUMENTATION.html#tips",
+    "title": "Documentation",
+    "section": "",
+    "text": "Images: Move images to docs/source/_static/ and update references\nCode blocks: Ensure proper syntax highlighting is specified\nCross-references: Update to use Sphinx’s reference system\nMetadata: Add appropriate metadata to each page for better SEO"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#common-issues",
+    "href": "DOCUMENTATION.html#common-issues",
+    "title": "Documentation",
+    "section": "",
+    "text": "Broken links: Double-check all links after conversion\nMissing images: Ensure all image paths are updated\nBuild failures: Check the ReadTheDocs build logs for errors\nFormatting differences: Some Markdown features might render differently in Sphinx"
+  },
+  {
+    "objectID": "DOCUMENTATION.html#view-the-documentation",
+    "href": "DOCUMENTATION.html#view-the-documentation",
+    "title": "Documentation",
+    "section": "",
+    "text": "Visit https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Task Management",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]

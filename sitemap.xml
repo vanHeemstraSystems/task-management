@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/vanHeemstraSystems/task-management/index.html</loc>
-    <lastmod>2023-06-08T21:04:40.980Z</lastmod>
+    <loc>https://vanHeemstraSystems.github.io/task-management/SUMMARY.html</loc>
+    <lastmod>2025-04-30T08:54:21.266Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/vanHeemstraSystems/task-management/about.html</loc>
-    <lastmod>2023-06-08T21:04:42.888Z</lastmod>
+    <loc>https://vanHeemstraSystems.github.io/task-management/about.html</loc>
+    <lastmod>2025-04-30T08:54:21.267Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/vanHeemstraSystems/task-management/SUMMARY.html</loc>
-    <lastmod>2023-06-08T21:04:43.232Z</lastmod>
+    <loc>https://vanHeemstraSystems.github.io/task-management/DOCUMENTATION.html</loc>
+    <lastmod>2025-04-30T08:54:21.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vanHeemstraSystems.github.io/task-management/index.html</loc>
+    <lastmod>2025-04-30T08:54:21.271Z</lastmod>
   </url>
 </urlset>
