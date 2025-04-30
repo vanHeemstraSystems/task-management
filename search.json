@@ -14,6 +14,13 @@
     "text": "About this site"
   },
   {
+    "objectID": "REFERENCES.html",
+    "href": "REFERENCES.html",
+    "title": "References",
+    "section": "",
+    "text": "References\n\nPrefect Workflow Orchestration: A Beginner’s Guide to Automation (Part 1: Intro)\nPrefect Hands-On Tutorial: Build, Schedule, & Automate Workflows (Part 2: Live Coding)"
+  },
+  {
     "objectID": "DOCUMENTATION.html",
     "href": "DOCUMENTATION.html",
     "title": "Documentation",
