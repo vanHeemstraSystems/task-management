@@ -138,7 +138,7 @@ To focus on the workitems in the flow, lets address them (taken from the example
 
 ## Workitems
 
-# Task: Gather existing documentation on the ART's current security framework and organizational strategic goals.
+### Task: Gather existing documentation on the ART's current security framework and organizational strategic goals.
 
 To accomplish anything, it is said by [Rory Vaden](https://www.youtube.com/watch?v=lZrqWPU7HLY) that one has to first think about it (**Think It**), then speak about it (**Speak It**), followed by acting upon it (**Act**) for it to happen (**It Happens**). We follow this same logic for accomplishing tasks.
 
