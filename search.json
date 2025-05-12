@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "SUMMARY.html",
-    "href": "SUMMARY.html",
-    "title": "Table of contents",
-    "section": "",
-    "text": "Table of contents\n\nTask - Management"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,11 +7,18 @@
     "text": "About this site"
   },
   {
-    "objectID": "REFERENCES.html",
-    "href": "REFERENCES.html",
-    "title": "References",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Task Management",
     "section": "",
-    "text": "References\n\nPrefect Workflow Orchestration: A Beginner’s Guide to Automation (Part 1: Intro)\nPrefect Hands-On Tutorial: Build, Schedule, & Automate Workflows (Part 2: Live Coding)\nWhat is Eiffel and why should I care?"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "SUMMARY.html",
+    "href": "SUMMARY.html",
+    "title": "Table of contents",
+    "section": "",
+    "text": "Table of contents\n\nTask - Management"
   },
   {
     "objectID": "DOCUMENTATION.html",
@@ -98,10 +98,10 @@
     "text": "Visit https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Task Management",
+    "objectID": "REFERENCES.html",
+    "href": "REFERENCES.html",
+    "title": "References",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "References\n\nPrefect Workflow Orchestration: A Beginner’s Guide to Automation (Part 1: Intro)\nPrefect Hands-On Tutorial: Build, Schedule, & Automate Workflows (Part 2: Live Coding)\nWhat is Eiffel and why should I care?"
   }
 ]
