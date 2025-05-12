@@ -158,9 +158,9 @@ Hence, for each task on the flow table we have the four steps of accomplishment:
 
 In addition, from experience we have learned that we can distinguish between three **activities** when working on something. It is either:
 
-- **Learn a System**: Its outcome is **Knowledge**.
-- **Make a Decision**: Its outcome is a **Decision**.
-- **Solve a Problem**: Its outcome is a **Solution**.
+- **Learn a System**: Its outcome is **Knowledge**. See [System-Learning Management](https://github.com/vanHeemstraSystems/system-learning-management).
+- **Make a Decision**: Its outcome is a **Decision**. See [Decision-Making Management](https://github.com/vanHeemstraSystems/decision-making-management).
+- **Solve a Problem**: Its outcome is a **Solution**. See [Problem-Solving Management](https://github.com/vanHeemstraSystems/problem-solving-management).
 
 Hence, per task we try to label which of the above three types of activity applies.
 
@@ -181,9 +181,9 @@ Hence, per task we try to label which of the above three types of activity appli
 
 Moreover, from experience we have learned that we can distinguish between three chronological **phases** when working on something. It is either:
 
-1) **Planning**: the act of deciding **how** to do something.
-2) **Scheduling**: the act of deciding **when** to do something, follows from *Planning*. 
-3) **Learning/Creating**: the act of doing something, follows from *Scheduling*.
+1) **Planning**: the act of deciding **how** to do something. See [Planning Management](https://github.com/vanHeemstraSystems/planning-management).
+2) **Scheduling**: the act of deciding **when** to do something, follows from *Planning*. See [Scheduling Management](https://github.com/vanHeemstraSystems/scheduling-management).
+3) **Learning/Creating**: the act of doing something, follows from *Scheduling*. See [Learning Management](https://github.com/vanHeemstraSystems/learning-management) and [Creation Management](https://github.com/vanHeemstraSystems/creation-management).
 
 Hence, per task we try to label which of the above **phase* applies.
 
