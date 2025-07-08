@@ -3,7 +3,7 @@
 # Make sure you have Backlog.md installed
 
 ```
-bun/npm i -g backlog.md
+npm i -g backlog.md
 ```
 
 # 1. Bootstrap a repo + backlog
