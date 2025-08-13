@@ -3,6 +3,8 @@
 task-management
 # Task Management
 
+<img width="648" height="332" alt="Image" src="https://github.com/user-attachments/assets/0e221315-b143-4648-b3c2-93545cca233a" />
+
 Can be read as "Task Management" at https://app.gitbook.com/s/Rs3XPuVclvoj92Exb9AA/
 
 Can be browsed as "Task Management" at https://vanheemstrasystems.github.io/task-management/
