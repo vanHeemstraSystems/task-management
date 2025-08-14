@@ -3,8 +3,6 @@
 task-management
 # Task Management
 
-<img width="648" height="332" alt="Image" src="https://github.com/user-attachments/assets/0e221315-b143-4648-b3c2-93545cca233a" />
-
 Can be read as "Task Management" at https://app.gitbook.com/s/Rs3XPuVclvoj92Exb9AA/
 
 Can be browsed as "Task Management" at https://vanheemstrasystems.github.io/task-management/
@@ -15,7 +13,7 @@ Based on "How to Run PostgreSQL and pgAdmin Using Docker" at https://towardsdata
 
 Based on "Super Productivity" at https://github.com/johannesjo/super-productivity
 
-![Image](https://github.com/user-attachments/assets/53516978-f490-44b9-ae86-15c2aea0de06)
+<img width="1262" height="710" alt="Image" src="https://github.com/user-attachments/assets/83a2f765-1413-41cf-a160-1e267a796b27" />
 
 Create yarn.lock file as follows:
 
