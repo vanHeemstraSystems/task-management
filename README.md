@@ -15,6 +15,15 @@ Based on "Super Productivity" at https://github.com/johannesjo/super-productivit
 
 <img width="1262" height="710" alt="Image" src="https://github.com/user-attachments/assets/83a2f765-1413-41cf-a160-1e267a796b27" />
 
+<table>
+<th colspan="5">Summarize with:</th><tr/> 
+<td><a href="https://chat.openai.com/?q=please+read+and+summarize+the+content+from+this+url+https://github.com/vanHeemstraSystems/task-management/">ChatGPT</a></td>
+<td><a href="https://x.com/i/grok?text=please+read+and+summarize+the+content+from+this+url+https://github.com/vanHeemstraSystems/task-management/">Grok</a></td>
+<td><a href="https://www.google.com/search?udm=50&aep=11&q=please+read+and+summarize+the+content+from+this+url+https://github.com/vanHeemstraSystems/task-management/">Google AI Mode</a></td>
+<td><a href="https://www.perplexity.ai/search/new?q=please+read+and+summarize+the+content+from+this+url+https://github.com/vanHeemstraSystems/task-management/">Perplexity</a></td>
+<td><a href="https://claude.ai/new?q=please+read+and+summarize+the+content+from+this+url+https://github.com/vanHeemstraSystems/task-management/">Claude.ai</a></td>  
+</table>
+
 Create yarn.lock file as follows:
 
 ```
