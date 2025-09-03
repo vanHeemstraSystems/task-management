@@ -4,3 +4,4 @@
 - [Prefect Hands-On Tutorial: Build, Schedule, & Automate Workflows (Part 2: Live Coding)](https://www.youtube.com/watch?v=EYs5xotSOT0)
 - [What is Eiffel and why should I care?](https://www.youtube.com/watch?v=FNF6b4Yv7oQ)
 - [Backlog.md](https://github.com/MrLesk/Backlog.md)
+- [Spec Kit](https://github.com/vanHeemstraSystems/spec-kit)
