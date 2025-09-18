@@ -13,7 +13,7 @@ Based on "How to Run PostgreSQL and pgAdmin Using Docker" at https://towardsdata
 
 Based on "Super Productivity" at https://github.com/johannesjo/super-productivity
 
-<img width="1262" height="710" alt="Image" src="https://github.com/user-attachments/assets/83a2f765-1413-41cf-a160-1e267a796b27" />
+<img width="1395" height="897" alt="Image" src="https://github.com/user-attachments/assets/b8540f28-bdff-42c5-8788-5dec637609b6" />
 
 <table>
 <th colspan="5">Summarize with:</th><tr/> 
