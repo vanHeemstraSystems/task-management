@@ -2,7 +2,7 @@
 
 task-management
 
-# Strategic Task Management
+# Task Management
 
 > “Don’t start with the task—start with the problem it solves.”
 
