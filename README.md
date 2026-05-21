@@ -18,6 +18,8 @@ Based on “Super Productivity” at https://github.com/johannesjo/super-product
 
 Based on “Five Pillars of Your Strategy” at https://github.com/vanHeemstraSystems/strategic-planning-management/blob/main/300/900/100/050/README.md
 
+Based on “The Creation Principle of Integrity: Think It, Speak It, Act It, It Happens” at https://www.youtube.com/watch?v=FEIrrPaWuPc
+
 <img width="1395" height="897" alt="Image" src="https://github.com/user-attachments/assets/b8540f28-bdff-42c5-8788-5dec637609b6" />
 
 <table>
