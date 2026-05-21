@@ -6,3 +6,4 @@
 - [Backlog.md](https://github.com/MrLesk/Backlog.md)
 - [Spec Kit](https://github.com/vanHeemstraSystems/spec-kit)
 - [The Creation Principle of Integrity - BRAINWASH Yourself for Success and ELIMINATE Negative Thinking: Think It, Say It, Act, It Happens](https://www.youtube.com/watch?v=FEIrrPaWuPc)
+- [The top 1% Think on Paper. Here’s How To Do It.](https://www.youtube.com/watch?v=tGrMjRqQGVY)
