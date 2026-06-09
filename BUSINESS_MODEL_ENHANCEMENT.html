@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Task Management</title>
+<title>business_model_enhancement – Task Management</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -111,35 +111,117 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#weekly-architect-practice-review-add-to-existing-weekly-review" id="toc-weekly-architect-practice-review-add-to-existing-weekly-review" class="nav-link active" data-scroll-target="#weekly-architect-practice-review-add-to-existing-weekly-review">Weekly Architect Practice Review (add to existing weekly review)</a></li>
+  <li><a href="#software-architect-practice-personal-strategy" id="toc-software-architect-practice-personal-strategy" class="nav-link" data-scroll-target="#software-architect-practice-personal-strategy">Software Architect Practice – Personal Strategy</a>
+  <ul class="collapse">
+  <li><a href="#who-i-serve" id="toc-who-i-serve" class="nav-link" data-scroll-target="#who-i-serve">Who I serve</a></li>
+  <li><a href="#my-core-value-drivers" id="toc-my-core-value-drivers" class="nav-link" data-scroll-target="#my-core-value-drivers">My core value drivers</a></li>
+  <li><a href="#my-navigational-principles" id="toc-my-navigational-principles" class="nav-link" data-scroll-target="#my-navigational-principles">My navigational principles</a></li>
+  <li><a href="#what-im-building-toward-current-period" id="toc-what-im-building-toward-current-period" class="nav-link" data-scroll-target="#what-im-building-toward-current-period">What I’m building toward (current period)</a></li>
+  <li><a href="#my-personal-task-filter" id="toc-my-personal-task-filter" class="nav-link" data-scroll-target="#my-personal-task-filter">My personal task filter</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Task Management</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
+<p>This is excellent. Your existing framework is already far more sophisticated than a typical task list — the Five Pillars, the Strategic Scoring Matrix, the anti-patterns — these are genuinely well-designed. The philosophy (“Don’t start with the task — start with the problem it solves”) is already perfectly aligned with the Business Model thinking from the article.</p>
+<p>The good news: you need very little added. The gap is small and specific.</p>
+<p>What You Already Have (Strong)</p>
+<pre><code>•   ✅ Value evaluation before accepting tasks (the scoring matrix)
+•   ✅ Problem-first thinking (Core Pain Point)
+•   ✅ Stakeholder identification
+•   ✅ Outcome value measurement
+•   ✅ Anti-patterns catalogue
+•   ✅ PostgreSQL schema capturing strategic metadata
+•   ✅ Daily/weekly/monthly review questions</code></pre>
+<p>What’s Missing for Your Personal Business Model</p>
+<p>Your framework is project-oriented — it evaluates tasks within a given engagement. What it doesn’t yet have is the practitioner-level layer: does this engagement, or this task within it, serve your own business model as a software architect?</p>
+<p>Concretely, three gaps:</p>
+<p>Gap 1 — No “architect value” classification</p>
+<p>Your strategic_tasks table captures value to the client/project. It doesn’t capture value to you as a practitioner. Add one field:</p>
+<p>– Add to strategic_tasks table architect_value_type VARCHAR(50),<br>
+– Values: ‘judgment’ | ‘execution’ | ‘knowledge-build’ | ‘relationship’ | ‘admin’ | ‘misaligned’</p>
+<p>judgment = you’re doing architecture work (deciding, advising, reviewing trade-offs) — this is your core value driver</p>
+<p>execution = you’re doing implementation work — sometimes necessary, but watch the ratio</p>
+<p>knowledge-build = builds your own expertise capital</p>
+<p>relationship = strengthens a key stakeholder connection</p>
+<p>admin = necessary overhead</p>
+<p>misaligned = should be declined next time</p>
+<p>At the end of any week, if judgment tasks aren’t the majority, you’re drifting toward being a resource rather than an architect.</p>
+<p>Gap 2 — No personal strategy filter at intake</p>
+<p>Your intake process asks four good questions about the task. Add one question about you:</p>
+<ol start="5" type="1">
+<li>Am I being engaged as an architect (judgment) or a resource (execution)? If execution: is there a clear path back to architectural influence on this engagement?</li>
+</ol>
+<p>This is the one question that protects your positioning over time.</p>
+<p>Gap 3 — Weekly review doesn’t close the loop to your own strategy</p>
+<p>Your existing weekly questions are good but project-facing. Add two practitioner-facing questions:</p>
+<section id="weekly-architect-practice-review-add-to-existing-weekly-review" class="level2">
+<h2 class="anchored" data-anchor-id="weekly-architect-practice-review-add-to-existing-weekly-review">Weekly Architect Practice Review (add to existing weekly review)</h2>
+<ul>
+<li>What % of my completed tasks were <code>judgment</code> vs <code>execution</code> this week?</li>
+<li>Did I document any architecture decisions or reasoning that didn’t exist before? (Y/N)</li>
+<li>Was I consulted before a key decision was made, or after? (before/after/not consulted)</li>
+<li>One thing I learned this week worth adding to note-management:</li>
+</ul>
+<p>That last question creates a direct link between task-management and your note-management repo — your tasks feed your knowledge base, which feeds your future value.</p>
+<p>The Minimal Concrete Changes</p>
+<p>Given your repo structure, here’s exactly what to add:</p>
+<ol type="1">
+<li><p>One new field in your DB schema (architect_value_type)</p></li>
+<li><p>One new question in your Strategic Task Intake Process (question 5 above)</p></li>
+<li><p>One new section in your weekly review template (4 questions above)</p></li>
+<li><p>A STRATEGY.md file at the repo root — your personal compass, re-read weekly. This is the one file that doesn’t exist yet and that the article argues is the most important thing. It’s the document your intake questions and weekly review refer back to.</p></li>
+</ol>
+<p>Suggested STRATEGY.md Skeleton for You</p>
+</section>
+<section id="software-architect-practice-personal-strategy" class="level1">
+<h1>Software Architect Practice – Personal Strategy</h1>
+<section id="who-i-serve" class="level2">
+<h2 class="anchored" data-anchor-id="who-i-serve">Who I serve</h2>
+<p>Organisations implementing or evolving complex software systems who need independent technical judgment to reduce risk and align architecture with business goals.</p>
+</section>
+<section id="my-core-value-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="my-core-value-drivers">My core value drivers</h2>
+<ol type="1">
+<li>Reduce delivery and technical risk on critical decisions</li>
+<li>Translate business intent into sound, defensible architecture</li>
+<li>Provide independent judgment — not just execution</li>
+<li>Prevent expensive architectural mistakes before they happen</li>
+<li>Increase team clarity and decision speed</li>
+</ol>
+</section>
+<section id="my-navigational-principles" class="level2">
+<h2 class="anchored" data-anchor-id="my-navigational-principles">My navigational principles</h2>
+<ul>
+<li>Only engage where I have genuine influence over architectural decisions</li>
+<li>Always document reasoning, not just conclusions (feeds note-management)</li>
+<li>Decline work where the business goal is undefined or unclear</li>
+<li>If I’m being used as a resource, not an architect, name it and reframe or exit</li>
+</ul>
+</section>
+<section id="what-im-building-toward-current-period" class="level2">
+<h2 class="anchored" data-anchor-id="what-im-building-toward-current-period">What I’m building toward (current period)</h2>
+<p>[Your focus area — e.g., deepen in AI systems / cloud-native / move toward retained advisory / build reputation in X domain]</p>
+</section>
+<section id="my-personal-task-filter" class="level2">
+<h2 class="anchored" data-anchor-id="my-personal-task-filter">My personal task filter</h2>
+<p>Before accepting any task or engagement: 1. Does this use my judgment, or just my hands? 2. Does this build expertise or reputation in my target domain? 3. Will my input actually be acted on?</p>
+<p>Your system is genuinely one of the more thoughtful personal productivity frameworks I’ve seen. These additions are thin — maybe a half-day of work — but they close the loop between value to clients (which you’ve built well) and value of your practice (which is currently invisible in the system). Would you like help writing the full STRATEGY.md populated for your specific situation?</p>
 
 
-</header>
-
-
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

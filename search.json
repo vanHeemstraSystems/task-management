@@ -7,18 +7,74 @@
     "text": "References\n\nPrefect Workflow Orchestration: A Beginner’s Guide to Automation (Part 1: Intro)\nPrefect Hands-On Tutorial: Build, Schedule, & Automate Workflows (Part 2: Live Coding)\nWhat is Eiffel and why should I care?\nBacklog.md\nSpec Kit\nThe Creation Principle of Integrity - BRAINWASH Yourself for Success and ELIMINATE Negative Thinking: Think It, Say It, Act, It Happens\nThe top 1% Think on Paper. Here’s How To Do It."
   },
   {
-    "objectID": "SUMMARY.html",
-    "href": "SUMMARY.html",
-    "title": "Table of contents",
-    "section": "",
-    "text": "Table of contents\n\nTask - Management"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Task Management",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "",
+    "text": "This is excellent. Your existing framework is already far more sophisticated than a typical task list — the Five Pillars, the Strategic Scoring Matrix, the anti-patterns — these are genuinely well-designed. The philosophy (“Don’t start with the task — start with the problem it solves”) is already perfectly aligned with the Business Model thinking from the article.\nThe good news: you need very little added. The gap is small and specific.\nWhat You Already Have (Strong)\nWhat’s Missing for Your Personal Business Model\nYour framework is project-oriented — it evaluates tasks within a given engagement. What it doesn’t yet have is the practitioner-level layer: does this engagement, or this task within it, serve your own business model as a software architect?\nConcretely, three gaps:\nGap 1 — No “architect value” classification\nYour strategic_tasks table captures value to the client/project. It doesn’t capture value to you as a practitioner. Add one field:\n– Add to strategic_tasks table architect_value_type VARCHAR(50),\n– Values: ‘judgment’ | ‘execution’ | ‘knowledge-build’ | ‘relationship’ | ‘admin’ | ‘misaligned’\njudgment = you’re doing architecture work (deciding, advising, reviewing trade-offs) — this is your core value driver\nexecution = you’re doing implementation work — sometimes necessary, but watch the ratio\nknowledge-build = builds your own expertise capital\nrelationship = strengthens a key stakeholder connection\nadmin = necessary overhead\nmisaligned = should be declined next time\nAt the end of any week, if judgment tasks aren’t the majority, you’re drifting toward being a resource rather than an architect.\nGap 2 — No personal strategy filter at intake\nYour intake process asks four good questions about the task. Add one question about you:\nThis is the one question that protects your positioning over time.\nGap 3 — Weekly review doesn’t close the loop to your own strategy\nYour existing weekly questions are good but project-facing. Add two practitioner-facing questions:"
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html#weekly-architect-practice-review-add-to-existing-weekly-review",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html#weekly-architect-practice-review-add-to-existing-weekly-review",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "Weekly Architect Practice Review (add to existing weekly review)",
+    "text": "Weekly Architect Practice Review (add to existing weekly review)\n\nWhat % of my completed tasks were judgment vs execution this week?\nDid I document any architecture decisions or reasoning that didn’t exist before? (Y/N)\nWas I consulted before a key decision was made, or after? (before/after/not consulted)\nOne thing I learned this week worth adding to note-management:\n\nThat last question creates a direct link between task-management and your note-management repo — your tasks feed your knowledge base, which feeds your future value.\nThe Minimal Concrete Changes\nGiven your repo structure, here’s exactly what to add:\n\nOne new field in your DB schema (architect_value_type)\nOne new question in your Strategic Task Intake Process (question 5 above)\nOne new section in your weekly review template (4 questions above)\nA STRATEGY.md file at the repo root — your personal compass, re-read weekly. This is the one file that doesn’t exist yet and that the article argues is the most important thing. It’s the document your intake questions and weekly review refer back to.\n\nSuggested STRATEGY.md Skeleton for You"
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html#who-i-serve",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html#who-i-serve",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "Who I serve",
+    "text": "Who I serve\nOrganisations implementing or evolving complex software systems who need independent technical judgment to reduce risk and align architecture with business goals."
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html#my-core-value-drivers",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html#my-core-value-drivers",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "My core value drivers",
+    "text": "My core value drivers\n\nReduce delivery and technical risk on critical decisions\nTranslate business intent into sound, defensible architecture\nProvide independent judgment — not just execution\nPrevent expensive architectural mistakes before they happen\nIncrease team clarity and decision speed"
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html#my-navigational-principles",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html#my-navigational-principles",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "My navigational principles",
+    "text": "My navigational principles\n\nOnly engage where I have genuine influence over architectural decisions\nAlways document reasoning, not just conclusions (feeds note-management)\nDecline work where the business goal is undefined or unclear\nIf I’m being used as a resource, not an architect, name it and reframe or exit"
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html#what-im-building-toward-current-period",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html#what-im-building-toward-current-period",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "What I’m building toward (current period)",
+    "text": "What I’m building toward (current period)\n[Your focus area — e.g., deepen in AI systems / cloud-native / move toward retained advisory / build reputation in X domain]"
+  },
+  {
+    "objectID": "BUSINESS_MODEL_ENHANCEMENT.html#my-personal-task-filter",
+    "href": "BUSINESS_MODEL_ENHANCEMENT.html#my-personal-task-filter",
+    "title": "Software Architect Practice – Personal Strategy",
+    "section": "My personal task filter",
+    "text": "My personal task filter\nBefore accepting any task or engagement: 1. Does this use my judgment, or just my hands? 2. Does this build expertise or reputation in my target domain? 3. Will my input actually be acted on?\nYour system is genuinely one of the more thoughtful personal productivity frameworks I’ve seen. These additions are thin — maybe a half-day of work — but they close the loop between value to clients (which you’ve built well) and value of your practice (which is currently invisible in the system). Would you like help writing the full STRATEGY.md populated for your specific situation?"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "SUMMARY.html",
+    "href": "SUMMARY.html",
+    "title": "Table of contents",
+    "section": "",
+    "text": "Table of contents\n\nTask - Management"
   },
   {
     "objectID": "DOCUMENTATION.html",
@@ -96,12 +152,5 @@
     "title": "Documentation",
     "section": "",
     "text": "Visit https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
