@@ -33,6 +33,8 @@ Based on “The top 1% Think on Paper. Here’s How To Do It.” at https://www.
 <td><a href="https://claude.ai/new?q=please+read+and+summarize+the+content+from+this+url+https://github.com/vanHeemstraSystems/task-management/">Claude.ai</a></td>  
 </table>
 
+> 📐 This repository is part of the [Business Model & Strategy Framework](https://github.com/vanHeemstraSystems/business-model-and-strategy-framework)
+
 -----
 
 ## Strategic Task Processing Framework
