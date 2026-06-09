@@ -7,27 +7,6 @@
     "text": "References\n\nPrefect Workflow Orchestration: A Beginner’s Guide to Automation (Part 1: Intro)\nPrefect Hands-On Tutorial: Build, Schedule, & Automate Workflows (Part 2: Live Coding)\nWhat is Eiffel and why should I care?\nBacklog.md\nSpec Kit\nThe Creation Principle of Integrity - BRAINWASH Yourself for Success and ELIMINATE Negative Thinking: Think It, Say It, Act, It Happens\nThe top 1% Think on Paper. Here’s How To Do It."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Task Management",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "SUMMARY.html",
-    "href": "SUMMARY.html",
-    "title": "Table of contents",
-    "section": "",
-    "text": "Table of contents\n\nTask - Management"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "DOCUMENTATION.html",
     "href": "DOCUMENTATION.html",
     "title": "Documentation",
@@ -103,5 +82,89 @@
     "title": "Documentation",
     "section": "",
     "text": "Visit https://vanHeemstraSystems-task-management.readthedocs.io/en/latest/"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "SUMMARY.html",
+    "href": "SUMMARY.html",
+    "title": "Table of contents",
+    "section": "",
+    "text": "Table of contents\n\nTask - Management"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Task Management",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html",
+    "href": "ARCHITECT_VALUE_MODEL.html",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "“Don’t start with the task — start with the problem it solves.” This document extends the existing Strategic Task Processing Framework with the personal Business Model layer.\n\nSee parent: sprint-management / ARCHITECT_VALUE_MODEL.md See also: strategic-planning-management / PERSONAL_STRATEGY.md\n\n\n\nThe existing Five Pillars framework evaluates task value for the client or project. This document adds the practitioner lens: does this task serve your own Business Model as a software architect?\nBoth lenses are required. A task can score highly on the Five Pillars (great for the project) but still be misaligned for your practice (execution-only, no judgment involved). Catching this pattern early is what protects your practice over time.\n\n\n\n\nThe existing four Strategic Task Intake questions become five:\n1. Do I know which Core Pain Point this task solves today?\n2. Do I know which Core Pain Point this task will solve tomorrow?\n3. If I asked my team which Underlying Needs are priority, would they all give the same answer?\n4. Does this task create new customers/value, or just maintain existing systems?\n\n➕ 5. Am I being engaged as an architect (judgment) or a resource (execution)?\n      If execution: is there a clear path back to architectural influence on this engagement?\n      If no path: this task is a signal — the engagement may need reframing.\n\n\n\n\nAdd one column to the existing strategic_tasks table:\n-- Add to strategic_tasks (extends existing schema in README.md)\nALTER TABLE strategic_tasks\nADD COLUMN architect_value_type VARCHAR(50) \n    CHECK (architect_value_type IN (\n        'judgment',        -- deciding/advising/reviewing trade-offs — core architect work\n        'execution',       -- implementing a defined solution\n        'knowledge-build', -- building own expertise capital\n        'relationship',    -- strengthening a key stakeholder connection\n        'admin',           -- necessary overhead\n        'misaligned'       -- should be declined — flag for retrospective\n    ));\n\n-- Useful query: weekly practice health check\nCREATE VIEW weekly_practice_health AS\nSELECT \n    architect_value_type,\n    COUNT(*) as task_count,\n    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 1) as percentage,\n    AVG(strategic_total) as avg_strategic_score\nFROM strategic_tasks\nWHERE created_at &gt;= CURRENT_DATE - INTERVAL '7 days'\nGROUP BY architect_value_type\nORDER BY task_count DESC;\n\n-- Index for practice health queries\nCREATE INDEX idx_architect_value_type ON strategic_tasks(architect_value_type, created_at DESC);\n\n\n\n\nThe existing matrix (0–25 strategic score) gains a second dimension:\nTask: _________________________________\n\n[ ] Core Pain Point    (0–5): ___\n[ ] Underlying Need    (0–5): ___\n[ ] Stakeholder Impact (0–5): ___\n[ ] Context Clarity    (0–5): ___\n[ ] Outcome Value      (0–5): ___\n\nSTRATEGIC SCORE: ___ / 25\n\narchitect_value_type:\n  ( ) judgment        → core architect work — prioritise\n  ( ) execution       → watch ratio; is this &gt;25% of your week?\n  ( ) knowledge-build → schedule deliberately\n  ( ) relationship    → invest as needed\n  ( ) admin           → minimise\n  ( ) misaligned      → decline or flag\n\nCOMBINED DECISION:\n  Score ≥ 20 + judgment      → Execute immediately\n  Score ≥ 15 + judgment      → Schedule this sprint\n  Score ≥ 15 + execution     → Accept with awareness — track ratio\n  Score ≥ 15 + misaligned    → Decline regardless of score\n  Score &lt; 15 + any           → Defer, delegate, or delete\n\n\n\n\nAdd these questions to your existing daily/weekly/monthly review cycle:\n\n\n\nWhat architect_value_type were most of today’s tasks?\nDid I create or update any Architecture Decision Record today?\n\n\n\n\n\nWhat was my judgment vs execution ratio this week?\n\nRun: SELECT * FROM weekly_practice_health;\n\nWas I consulted before or after key decisions?\nDid I document reasoning (not just conclusions) in any ADR or note?\nDid I add anything to note-management from this week’s work?\nDid I accept any misaligned tasks? How did they get through the intake gate?\n\n\n\n\n\nIs the trend in my judgment percentage going up, flat, or down?\nAm I solving architectural problems or just maintaining systems?\nWould my stakeholders describe my value the way I would?\nIs my PERSONAL_STRATEGY.md still accurate, or does it need updating?\n\n\n\n\n\n\n\n\n\narchitect_value_type\nTarget\n\n\n\n\njudgment\n&gt; 50% of tasks\n\n\nknowledge-build\n10–20%\n\n\nexecution\n&lt; 25%\n\n\nadmin\n&lt; 10%\n\n\nmisaligned\n0%\n\n\n\nIf execution exceeds 40% for two consecutive weeks: this is a signal to reframe the engagement or renegotiate scope at the sprint or PIPE level.\n\n\n\n\nEvery task tagged judgment or knowledge-build that produces a meaningful insight should generate an entry in note-management. This creates a compounding knowledge asset — the record of why you made the decisions you made, which is the evidence of your architectural value over time.\nTrigger rule: If you made a significant architectural trade-off decision, created an ADR, or learned something domain-relevant — add a note. Takes 5 minutes. Compounds indefinitely.\n\n\n\n\n\n\n\nDirection\nLevel\nDocument\n\n\n\n\n↑ Up\nSprint Execution\nARCHITECT_VALUE_MODEL.md\n\n\n↑↑ Root\nPersonal Strategy\nPERSONAL_STRATEGY.md\n\n\n→ Lateral\nKnowledge Base\nnote-management\n\n\n→ Lateral\nBacklog\nbacklog-management"
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#extension-to-the-strategic-task-processing-framework",
+    "href": "ARCHITECT_VALUE_MODEL.html#extension-to-the-strategic-task-processing-framework",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "The existing Five Pillars framework evaluates task value for the client or project. This document adds the practitioner lens: does this task serve your own Business Model as a software architect?\nBoth lenses are required. A task can score highly on the Five Pillars (great for the project) but still be misaligned for your practice (execution-only, no judgment involved). Catching this pattern early is what protects your practice over time."
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#extended-task-intake-the-sixth-question",
+    "href": "ARCHITECT_VALUE_MODEL.html#extended-task-intake-the-sixth-question",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "The existing four Strategic Task Intake questions become five:\n1. Do I know which Core Pain Point this task solves today?\n2. Do I know which Core Pain Point this task will solve tomorrow?\n3. If I asked my team which Underlying Needs are priority, would they all give the same answer?\n4. Does this task create new customers/value, or just maintain existing systems?\n\n➕ 5. Am I being engaged as an architect (judgment) or a resource (execution)?\n      If execution: is there a clear path back to architectural influence on this engagement?\n      If no path: this task is a signal — the engagement may need reframing."
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#extended-database-schema",
+    "href": "ARCHITECT_VALUE_MODEL.html#extended-database-schema",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "Add one column to the existing strategic_tasks table:\n-- Add to strategic_tasks (extends existing schema in README.md)\nALTER TABLE strategic_tasks\nADD COLUMN architect_value_type VARCHAR(50) \n    CHECK (architect_value_type IN (\n        'judgment',        -- deciding/advising/reviewing trade-offs — core architect work\n        'execution',       -- implementing a defined solution\n        'knowledge-build', -- building own expertise capital\n        'relationship',    -- strengthening a key stakeholder connection\n        'admin',           -- necessary overhead\n        'misaligned'       -- should be declined — flag for retrospective\n    ));\n\n-- Useful query: weekly practice health check\nCREATE VIEW weekly_practice_health AS\nSELECT \n    architect_value_type,\n    COUNT(*) as task_count,\n    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 1) as percentage,\n    AVG(strategic_total) as avg_strategic_score\nFROM strategic_tasks\nWHERE created_at &gt;= CURRENT_DATE - INTERVAL '7 days'\nGROUP BY architect_value_type\nORDER BY task_count DESC;\n\n-- Index for practice health queries\nCREATE INDEX idx_architect_value_type ON strategic_tasks(architect_value_type, created_at DESC);"
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#updated-strategic-task-evaluation-matrix",
+    "href": "ARCHITECT_VALUE_MODEL.html#updated-strategic-task-evaluation-matrix",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "The existing matrix (0–25 strategic score) gains a second dimension:\nTask: _________________________________\n\n[ ] Core Pain Point    (0–5): ___\n[ ] Underlying Need    (0–5): ___\n[ ] Stakeholder Impact (0–5): ___\n[ ] Context Clarity    (0–5): ___\n[ ] Outcome Value      (0–5): ___\n\nSTRATEGIC SCORE: ___ / 25\n\narchitect_value_type:\n  ( ) judgment        → core architect work — prioritise\n  ( ) execution       → watch ratio; is this &gt;25% of your week?\n  ( ) knowledge-build → schedule deliberately\n  ( ) relationship    → invest as needed\n  ( ) admin           → minimise\n  ( ) misaligned      → decline or flag\n\nCOMBINED DECISION:\n  Score ≥ 20 + judgment      → Execute immediately\n  Score ≥ 15 + judgment      → Schedule this sprint\n  Score ≥ 15 + execution     → Accept with awareness — track ratio\n  Score ≥ 15 + misaligned    → Decline regardless of score\n  Score &lt; 15 + any           → Defer, delegate, or delete"
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#weekly-practitioner-review",
+    "href": "ARCHITECT_VALUE_MODEL.html#weekly-practitioner-review",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "Add these questions to your existing daily/weekly/monthly review cycle:\n\n\n\nWhat architect_value_type were most of today’s tasks?\nDid I create or update any Architecture Decision Record today?\n\n\n\n\n\nWhat was my judgment vs execution ratio this week?\n\nRun: SELECT * FROM weekly_practice_health;\n\nWas I consulted before or after key decisions?\nDid I document reasoning (not just conclusions) in any ADR or note?\nDid I add anything to note-management from this week’s work?\nDid I accept any misaligned tasks? How did they get through the intake gate?\n\n\n\n\n\nIs the trend in my judgment percentage going up, flat, or down?\nAm I solving architectural problems or just maintaining systems?\nWould my stakeholders describe my value the way I would?\nIs my PERSONAL_STRATEGY.md still accurate, or does it need updating?"
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#weekly-practice-health-target-ratios",
+    "href": "ARCHITECT_VALUE_MODEL.html#weekly-practice-health-target-ratios",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "architect_value_type\nTarget\n\n\n\n\njudgment\n&gt; 50% of tasks\n\n\nknowledge-build\n10–20%\n\n\nexecution\n&lt; 25%\n\n\nadmin\n&lt; 10%\n\n\nmisaligned\n0%\n\n\n\nIf execution exceeds 40% for two consecutive weeks: this is a signal to reframe the engagement or renegotiate scope at the sprint or PIPE level."
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#connection-to-note-management",
+    "href": "ARCHITECT_VALUE_MODEL.html#connection-to-note-management",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "Every task tagged judgment or knowledge-build that produces a meaningful insight should generate an entry in note-management. This creates a compounding knowledge asset — the record of why you made the decisions you made, which is the evidence of your architectural value over time.\nTrigger rule: If you made a significant architectural trade-off decision, created an ADR, or learned something domain-relevant — add a note. Takes 5 minutes. Compounds indefinitely."
+  },
+  {
+    "objectID": "ARCHITECT_VALUE_MODEL.html#links-across-the-hierarchy",
+    "href": "ARCHITECT_VALUE_MODEL.html#links-across-the-hierarchy",
+    "title": "Architect Value Model – Task Management Layer",
+    "section": "",
+    "text": "Direction\nLevel\nDocument\n\n\n\n\n↑ Up\nSprint Execution\nARCHITECT_VALUE_MODEL.md\n\n\n↑↑ Root\nPersonal Strategy\nPERSONAL_STRATEGY.md\n\n\n→ Lateral\nKnowledge Base\nnote-management\n\n\n→ Lateral\nBacklog\nbacklog-management"
   }
 ]
