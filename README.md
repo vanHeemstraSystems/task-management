@@ -323,8 +323,6 @@ The scale of your productivity isn’t determined by your ambition to complete t
 
 Don’t let your task list be a shopping list you didn’t write. Identify the Underlying Needs that everyone else is ignoring, and make solving those your strategic direction.
 
-TO DO: Implement the advise given in [BUSINESS_MODEL_ENHANCEMENT.md](./BUSINESS_MODEL_ENHANCEMENT.md).
-
 
 
 
